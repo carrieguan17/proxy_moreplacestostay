@@ -20,7 +20,7 @@ app.use(bodyparser.urlencoded( {extended: true} ));
 
 // set up for proxy
 app.get('/app1',function(req,res) {
-  res.send("Hello world From Server 1");
+  res.send();
 });
 
 // routes (will make a router to direct different routes)

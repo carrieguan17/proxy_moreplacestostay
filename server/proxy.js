@@ -5,8 +5,8 @@ var apiProxy = httpProxy.createProxyServer();
 const path = require('path');
 const filePath = path.join(__dirname, '../client/dist');
 var moreplaces = 'http://localhost:3000',
-    photos = 'http://76.102.242.66:4242',
-    calandar = 'http://76.94.193.4:5000';
+    photos = 'http://localhost:4242',
+    calandar = 'http://localhost:5000';
 
 app.use(express.static(filePath));
 app.all("/app1/*", function(req, res) {
