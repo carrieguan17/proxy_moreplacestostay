@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   getProperties(location) {
-    axios.get(`/properties/${location}`)
+    axios.get(`/photo/properties/${location}`)
     .then((results) => {
       this.setState({
         properties: results.data
@@ -44,7 +44,7 @@ class App extends React.Component {
   }
 
   getRooms(location) {
-    axios.get(`/rooms/${location}`)
+    axios.get(`/photo/rooms/${location}`)
     .then((results) => {
       this.setState({
         rooms: results.data
@@ -54,7 +54,7 @@ class App extends React.Component {
   }
 
   getPhotos(location) {
-    axios.get(`/photos/${location}`)
+    axios.get(`/photo/photos/${location}`)
     .then((results) => {
       this.setState({
         photos: results.data
@@ -102,7 +102,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const location = window.location.pathname.match(/(\d+)/) ? window.location.pathname.match(/(\d+)/)[0] : null;
+    const location = window.location.pathname.match(/(\d+)/) ? window.location.pathname.match(/(\d+)/)[0] : 1;
     this.getProperties(location);
     this.getRooms(location);
     this.getPhotos(location);

@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 app.use('/property/:id', express.json());
 app.use('/property/:id', express.static(path.join(__dirname, '../public')));
 
-app.get('/properties/:id', (req, res) => {
+app.get('/photo/properties/:id', (req, res) => {
   let property = req.params.id;
   model.getProperties(property, (err, results) => {
     if (err) {
@@ -24,7 +24,7 @@ app.get('/properties/:id', (req, res) => {
     }
   });
 })
-app.get('/rooms/:id', (req, res) => {
+app.get('/photo/rooms/:id', (req, res) => {
   let property = req.params.id;
   model.getRooms(property, (err, results) => {
     if (err) {
@@ -35,7 +35,7 @@ app.get('/rooms/:id', (req, res) => {
     }
   });
 })
-app.get('/photos/:id', (req, res) => {
+app.get('/photo/photos/:id', (req, res) => {
   let property = req.params.id;
   model.getPhotos(property, (err, results) => {
     if (err) {
