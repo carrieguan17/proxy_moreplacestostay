@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1597275581311" clover="3.2.0">
+  <project timestamp="1597275581311" name="All files">
+    <metrics statements="33" coveredstatements="27" conditionals="6" coveredconditionals="3" methods="15" coveredmethods="9" elements="54" coveredelements="39" complexity="0" loc="33" ncloc="33" packages="1" files="4" classes="4"/>
+    <file name="App.jsx" path="/Users/alexanderwu/Documents/Hack Reactor/HRSF129/hrsf129-front-end-capstone/service_photos/client/src/components/App.jsx">
+      <metrics statements="20" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="12" coveredmethods="6"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="23" count="4" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="33" count="4" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="43" count="4" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="53" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="54" count="4" type="stmt"/>
+      <line num="55" count="4" type="stmt"/>
+      <line num="56" count="4" type="stmt"/>
+      <line num="57" count="4" type="stmt"/>
+      <line num="63" count="5" type="stmt"/>
+    </file>
+    <file name="Description.jsx" path="/Users/alexanderwu/Documents/Hack Reactor/HRSF129/hrsf129-front-end-capstone/service_photos/client/src/components/Description.jsx">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="34" count="3" type="stmt"/>
+      <line num="41" count="3" type="stmt"/>
+      <line num="49" count="3" type="stmt"/>
+      <line num="61" count="3" type="stmt"/>
+      <line num="72" count="3" type="stmt"/>
+      <line num="87" count="2" type="stmt"/>
+    </file>
+    <file name="LandingPage.jsx" path="/Users/alexanderwu/Documents/Hack Reactor/HRSF129/hrsf129-front-end-capstone/service_photos/client/src/components/LandingPage.jsx">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="6" count="1" type="stmt"/>
+    </file>
+    <file name="MainPhotos.jsx" path="/Users/alexanderwu/Documents/Hack Reactor/HRSF129/hrsf129-front-end-capstone/service_photos/client/src/components/MainPhotos.jsx">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="19" count="3" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>

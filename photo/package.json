@@ -1,0 +1,49 @@
+{
+  "name": "airbnb_photos_service",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "webpack": "webpack -d --watch",
+    "seed": "node ./db/seed.js",
+    "dbsetup": "mysql -u root -p < schema.sql",
+    "start": "nodemon server/index.js",
+    "proxy": "nodemon server/proxy.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "axios": "^0.19.2",
+    "babel-jest": "^26.2.2",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "http-proxy": "^1.18.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^26.2.2",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
+    "jest-styled-components": "^7.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
