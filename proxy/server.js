@@ -45,7 +45,7 @@ app.listen(2500);
 app.all("/stay/*", (req, res) => {
   axios({
     method: req.method,
-    url: "http://18.144.9.100/" + req.originalUrl,
+    url: "http://18.144.9.100" + req.originalUrl,
     headers: req.headers,
     data: req.data
   }).then((response) => {
