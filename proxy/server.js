@@ -42,7 +42,7 @@ app.use(express.static(filePath));
 app.listen(2500);
 
 // port 3000 (moreplaces)
-app.all("/place/*", (req, res) => {
+app.all("/stay/*", (req, res) => {
   axios({
     method: req.method,
     url: "http://50.18.72.36" + req.originalUrl,
