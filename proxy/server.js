@@ -45,7 +45,7 @@ app.listen(2500);
 app.all("/place/*", (req, res) => {
   axios({
     method: req.method,
-    url: "http://50.18.72.36:3000" + req.originalUrl,
+    url: "http://50.18.72.36" + req.originalUrl,
     headers: req.headers,
     data: req.data
   }).then((response) => {
@@ -57,7 +57,7 @@ app.all("/place/*", (req, res) => {
 app.all("/calendar/*", (req, res) => {
   axios({
     method: req.method,
-    url: "http://50.18.32.160:3001",
+    url: "http://50.18.32.160",
     headers: req.headers,
     data: req.data
   }).then((response) => {
@@ -69,7 +69,7 @@ app.all("/calendar/*", (req, res) => {
 app.all("/photos/*", (req, res) => {
   axios({
     method: req.method,
-    url: `http://13.56.81.188:4242` + req.originalUrl,
+    url: `http://13.56.81.188` + req.originalUrl,
     headers: req.headers,
     data: req.data
   }).then((response) => {
