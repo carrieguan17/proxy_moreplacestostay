@@ -6,8 +6,12 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 const filePath = path.join(__dirname, './public');
+const bodyParser = require('body-parser');
+
 app.use(cors());
 app.use(express.static(filePath));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // middleware method
   // proxy middleware options
@@ -42,22 +46,41 @@ app.use(express.static(filePath));
 app.listen(2500);
 
 // port 3000 (moreplaces)
-app.all("/stay/*", (req, res) => {
-  axios({
-    method: req.method,
-    url: "http://18.144.9.100" + req.originalUrl,
-    headers: req.headers,
-    data: req.data
-  }).then((response) => {
-    res.send(response.data);
-  }).catch((err) => console.log(err));
+// app.all("/stay/*", (req, res) => {
+//   axios({
+//     method: req.method,
+//     url: "http://18.144.9.100" + req.originalUrl,
+//     headers: req.headers,
+//     data: req.data
+//   }).then((response) => {
+//     res.send(response.data);
+//   }).catch((err) => console.log(err));
+// });
+
+app.get("/stay/*", (req, res) => {
+  axios.get("http://18.144.9.100" + req.originalUrl)
+    .then(response => {
+      res.send(response.data);
+    })
+    .catch((error) => {
+      res.status(500).send(error);
+    });
+});
+app.post("/stay/*", (req, res) => {
+  axios.post("http://18.144.9.100" + req.originalUrl, req.body)
+    .then(response => {
+      res.send(response.data);
+    })
+    .catch((error) => {
+      res.status(500).send(error);
+    });
 });
 
 // port 3001 (calendar)
 app.all("/calendar/*", (req, res) => {
   axios({
     method: req.method,
-    url: "http://50.18.32.160",
+    url: "http://50.18.32.160" + req.originalUrl,
     headers: req.headers,
     data: req.data
   }).then((response) => {
