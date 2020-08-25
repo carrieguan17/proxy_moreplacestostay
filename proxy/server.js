@@ -92,7 +92,7 @@ app.all("/calendar/*", (req, res) => {
 app.all("/photos/*", (req, res) => {
   axios({
     method: req.method,
-    url: `http://13.56.81.188` + req.originalUrl,
+    url: `http://50.18.139.102` + req.originalUrl,
     headers: req.headers,
     data: req.data
   }).then((response) => {
